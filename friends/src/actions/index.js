@@ -35,7 +35,7 @@ export const fetchData = () => dispatch => {
 
     axiosWithAuth()
         .get("/friends")
-        .then(res=> {
+        .then(res => {
             console.log(res);
         })
         .catch(err => console.log(err));
