@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import FriendItem from "./FriendItem";
-import { fetchData } from "../actions";
-// import "./FriendList.scss";
+import FriendItem from "../FriendItem/FriendItem";
+import { fetchData } from "../../actions";
+import "./FriendList.scss";
 
 class FriendList extends React.Component {
 

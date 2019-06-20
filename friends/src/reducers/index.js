@@ -1,4 +1,4 @@
-import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE } from "../actions";
+import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE, FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_FAILURE } from "../actions";
 
 const initialState = {
     friends: [],
@@ -26,11 +26,32 @@ export const reducer = (state = initialState, action) => {
             }
         
         case LOGIN_FAILURE:
-                return {
-                    ...state,
-                    loggingIn: false,
-                    error: `${action.payload}`
-                }
+            return {
+                ...state,
+                loggingIn: false,
+                error: `${action.payload}`
+            }
+
+        case FETCH_DATA_START:
+            return {
+                ...state,
+                fetchingFriends: true,
+                error: null
+            }
+
+        case FETCH_DATA_SUCCESS:
+            return {
+                ...state,
+                fetchingFriends: false,
+                friends: action.payload
+            }
+
+        case FETCH_DATA_FAILURE:
+            return {
+                ...state,
+                fetchingFriends: false,
+                error: action.payload
+            }
 
         default:
             return state;
