@@ -24,6 +24,13 @@ export const reducer = (state = initialState, action) => {
                 loggingIn: false,
 
             }
+        
+        case LOGIN_FAILURE:
+                return {
+                    ...state,
+                    loggingIn: false,
+                    error: action.payload
+                }
 
         default:
             return state;
