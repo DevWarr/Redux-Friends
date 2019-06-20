@@ -20,7 +20,7 @@ class Login extends React.Component {
     login = e => {
         e.preventDefault();
         this.props.login({username: this.state.username, password: this.state.password});
-        this.setState({username: "", password: ""})
+        // this.setState({username: "", password: ""})
     }
 
     render() {
@@ -34,9 +34,9 @@ class Login extends React.Component {
                         onChange=   {this.handleChanges}
                     />
                     <input 
-                        type=       "text"
-                        name=       "username"
-                        value=      {this.state.username}
+                        type=       "password"
+                        name=       "password"
+                        value=      {this.state.password}
                         onChange=   {this.handleChanges}
                     />
                     <button>

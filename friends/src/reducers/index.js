@@ -1,7 +1,7 @@
 import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE } from "../actions";
 
 const initialState = {
-    freinds: [],
+    friends: [],
     loggingIn: false,
     fetchingFriends: false,
     deletingFriend: false,
@@ -17,6 +17,14 @@ export const reducer = (state = initialState, action) => {
                 loggingIn: true,
                 error: null
             }
+
+        case LOGIN_SUCCESS:
+            return {
+                ...state,
+                loggingIn: false,
+
+            }
+
         default:
             return state;
     }
