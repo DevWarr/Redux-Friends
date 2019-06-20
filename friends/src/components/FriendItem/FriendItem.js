@@ -1,7 +1,7 @@
 import React from "react";
-import "./FriendUpdateable.scss";
+import "./FriendItem.scss";
 
-export default class FriendUpdateable extends React.Component {
+export default class FriendItem extends React.Component {
     /**Props:
      * .friend
      * .delete

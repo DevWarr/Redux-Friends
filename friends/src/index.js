@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
+import WebFont from 'webfontloader';
 
 import { reducer } from "./reducers";
 import './index.css';
@@ -13,6 +14,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
+
+WebFont.load({
+    google: {
+        families: ['Share Tech Mono', 'monospace']
+    }
+})
 
 ReactDOM.render(
     <Provider store={store} >

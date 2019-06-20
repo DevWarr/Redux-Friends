@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { FriendItem } from "../";
-import { fetchData } from "../../actions";
+import { fetchData, putFriend, deleteFriend } from "../../actions";
 import "./FriendList.scss";
 
 class FriendList extends React.Component {
@@ -22,8 +22,8 @@ class FriendList extends React.Component {
                         return  <FriendItem
                                     friend=   {friendObj} 
                                     key=      {friendObj.id} 
-                                    // delete=   {this.props.delete}
-                                    // submit=   {this.props.submit}
+                                    delete=   {this.props.deleteFrind}
+                                    submit=   {this.props.putFriend}
                                 />
                     })}
                 </div> {/* friend-container */}
@@ -40,4 +40,4 @@ const mstp = state => {
     }
 }
 
-export default connect(mstp, { fetchData })(FriendList);
+export default connect(mstp, { fetchData, putFriend, deleteFriend })(FriendList);
