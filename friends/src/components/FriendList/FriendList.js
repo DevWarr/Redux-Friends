@@ -22,7 +22,7 @@ class FriendList extends React.Component {
                         return  <FriendItem
                                     friend=   {friendObj} 
                                     key=      {friendObj.id} 
-                                    delete=   {this.props.deleteFrind}
+                                    delete=   {this.props.deleteFriend}
                                     submit=   {this.props.putFriend}
                                 />
                     })}
