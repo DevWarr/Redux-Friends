@@ -29,7 +29,7 @@ export const reducer = (state = initialState, action) => {
                 return {
                     ...state,
                     loggingIn: false,
-                    error: action.payload
+                    error: `${action.payload}`
                 }
 
         default:
