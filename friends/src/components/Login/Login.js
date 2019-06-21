@@ -3,6 +3,8 @@ import Loader from "react-loader";
 import { connect } from "react-redux";
 import { login } from "../../actions";
 
+import "./Login.scss";
+
 class Login extends React.Component {
     constructor() {
         super();
@@ -32,25 +34,27 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="login">
                 <h1>Log In</h1>
 
                 <form onSubmit={this.login}>
                     <input 
-                        type=       "text"
-                        name=       "username"
-                        value=      {this.state.username}
-                        onChange=   {this.handleChanges}
+                        type=          "text"
+                        name=          "username"
+                        placeholder=   "username"
+                        value=         {this.state.username}
+                        onChange=      {this.handleChanges}
                     />
                     <input 
-                        type=       "password"
-                        name=       "password"
-                        value=      {this.state.password}
-                        onChange=   {this.handleChanges}
+                        type=          "password"
+                        name=          "password"
+                        placeholder=   "password"
+                        value=         {this.state.password}
+                        onChange=      {this.handleChanges}
                     />
                     <button>Log In</button>
                 </form>
-                {this.props.loggingIn ? <Loader /> : null}
+                {this.props.loggingIn ? <Loader color="#7bff00" /> : null}
                 <h3>{this.props.error}</h3>
             </div>
         );

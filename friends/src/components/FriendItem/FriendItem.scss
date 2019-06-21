@@ -5,6 +5,10 @@
     box-shadow:  1px 1px 2px gray;
     margin:      40px;
     
+    * {
+        font-family: 'Share Tech Mono', monospace;
+        color:       #7bff00
+    }
 
     // Master Styling for all inputs
     input {

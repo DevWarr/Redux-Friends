@@ -12,12 +12,15 @@ nav {
     span {
         flex-grow:    1;
         text-align:   left;
+        font-family:  'Share Tech Mono', monospace;
+        color:        #7bff00
     }
 
     a {
         margin: 0 5px;
         padding: 2px;
         text-decoration:   none;
+        font-family: 'Share Tech Mono', monospace;
         color:             #316600;
 
         &:hover {color:    #7bff00}
