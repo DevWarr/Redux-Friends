@@ -2,8 +2,8 @@ import React from "react";
 import axiosWithAuth from "../utils/axiosWithAuth";
 
 const Login = props => {
+  // Creating our state, and our handleChanges function
   const [form, setForm] = React.useState({ username: "", password: "" });
-
   const handleChanges = e => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
